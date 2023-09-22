@@ -1,9 +1,8 @@
-// User Prompt when Website opens
-// customer type in vanilla,vanilla,vanilla,strawberry,coffee,coffee as input into the prompt
-// create a table that displays how many of each flavor the customer ordered (inputted)
-// Customer order input is the following: (3) vanilla, (2) coffee, and (1) strawberry
+// √User Prompt when Website opens
+// √customer type in vanilla,vanilla,vanilla,strawberry,coffee,coffee as input into the prompt
+// √split flavors by commas into an flavors array
+// create a table that displays how many of each flavor the customer ordered (pseudo input)
 // display in console the quantity of each flavor listed
-//split flavors by commas into an flavors array
 
 
 let flavors = prompt("What flavors would you like?", "vanilla,vanilla,vanilla,strawberry,coffee,coffee");
@@ -25,7 +24,10 @@ console.log(flavorArray);
 // This console log allows us to see the output of the newly initialized flavorArray variable
 
 const froyoOrder = {};
-// this declares an object. It is not initialized here as it has no value
+// this declares an object. It is not initialized here as it has no value yet. 
+// It's purpose is to organize large amounts of similar data. For example, how many of each flavor of frozen 
+// yogurt was ordered in this js file. 
+
     for (let i = 0; i < flavorArray.length; i++) {
         // this is setting the iteration equal to zerom; telling the loop to run as many times as index positions exists; and adding 1 iteration after
         // each time the loop is ran; 
@@ -35,8 +37,9 @@ const froyoOrder = {};
 // instead of an actual index position in the array. Using the i or iteration starts at the first index position. When the loops runs, it will move to 
 // the next index/iteration position.
 
-        console.log(i);
+       // console.log(i);
+       // ^^ This is logging/printing the value of the loop variable i (let =i). It will pring the current index position as the loop iterates.
     }
-
-
+console.table(froyoOrder);
+// ^^ This presents object array data and console.log() function output data in console as a table
 
