@@ -22,16 +22,12 @@ let flavorArray = flavors.split(',');
 // ^^ commas are shown in the array response because the array datatype innately utilizes commas to separate its index positions.
 // ^^ .split method is splitting flavors user input at the comma, creating an array with the split substrings, and then assigning the array to the flavorArray variable.
 
-console.log(flavorArray); 
-
+// console.log(flavorArray); 
 // This console log allows us to see the output of the newly initialized flavorArray variable
 
-const froyoOrder = {
+function countFlavors(flavorArray) {
 
-    vanilla: 3,
-    strawberry: 1,
-    coffee: 2
-};
+const froyoOrder = {};
 // this declares an object. It is not initialized here as it has no value yet. 
 // It's purpose is to organize large amounts of similar data. For example, how many of each flavor of frozen 
 // yogurt was ordered in this js file. 
@@ -58,7 +54,7 @@ const froyoOrder = {
         } else{ froyoOrder[flavorArray] = 1;
         // ^^ if we have not seen it before, add it to the result
         }
-  
+    }  
     }
 console.table(froyoOrder);
 // ^^ This presents object array data and console.log() function output data in console as a table
