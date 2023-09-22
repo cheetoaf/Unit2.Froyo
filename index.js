@@ -1,8 +1,12 @@
+// vvv The following are the project requirement:
+//--------------------------------------------------------------------------------------------
 // √User Prompt when Website opens
 // √customer type in vanilla,vanilla,vanilla,strawberry,coffee,coffee as input into the prompt
 // √split flavors by commas into an flavors array
-// create a table that displays how many of each flavor the customer ordered (pseudo input)
+// √create a table that displays how many of each flavor the customer ordered (pseudo input)
 // display in console the quantity of each flavor listed
+// --------------------------------------------------------------------------------------------
+// ^^^ Project Requirement End
 
 
 let flavors = prompt("What flavors would you like?", "vanilla,vanilla,vanilla,strawberry,coffee,coffee");
@@ -17,7 +21,6 @@ let flavorArray = flavors.split(',');
 // ^^ after splitting the inputted string at each comma, the comma is actually removed and only the subtrings are being inputted into the array
 // ^^ commas are shown in the array response because the array datatype innately utilizes commas to separate its index positions.
 // ^^ .split method is splitting flavors user input at the comma, creating an array with the split substrings, and then assigning the array to the flavorArray variable.
-
 
 console.log(flavorArray); 
 
