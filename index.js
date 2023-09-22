@@ -26,7 +26,12 @@ console.log(flavorArray);
 
 // This console log allows us to see the output of the newly initialized flavorArray variable
 
-const froyoOrder = {};
+const froyoOrder = {
+
+    vanilla: 3,
+    strawberry: 1,
+    coffee: 2
+};
 // this declares an object. It is not initialized here as it has no value yet. 
 // It's purpose is to organize large amounts of similar data. For example, how many of each flavor of frozen 
 // yogurt was ordered in this js file. 
@@ -41,8 +46,21 @@ const froyoOrder = {};
 // the next index/iteration position.
 
        // console.log(i);
-       // ^^ This is logging/printing the value of the loop variable i (let =i). It will pring the current index position as the loop iterates.
+       // ^^ Do Not Use this console.log(i). Informational Purposes, This is logging/printing the value of the loop variable i (let =i). It will print/log the current index position as the loop iterates.
+        
+       if (froyoOrder[flavorArray]) {
+             //^^If we have seen the flavor before
+        
+            froyoOrder[flavorArray] = result[flavorArray] +=1;
+        //^^ increase the number by 1
+        //^^ froyoOrder[flavorArray] = result[flavorArray] +1; <<< this is another way of writing it. The live line of code above is shorthand +=
+
+        } else{ froyoOrder[flavorArray] = 1;
+        // ^^ if we have not seen it before, add it to the result
+        }
+  
     }
 console.table(froyoOrder);
 // ^^ This presents object array data and console.log() function output data in console as a table
+
 
